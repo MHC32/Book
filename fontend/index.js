@@ -38,7 +38,7 @@ function addBookToDOM(book) {
             <h4>Author: <span>${book.author}</span></h4>
         </div>
         <div class="container-h4">
-            <h4>Page: <span>${book.pages}</span></h4>
+            <h4>Page: <span>${book.page}</span></h4>
         </div>
         <div class="container-h4">
             <h4>Read: <span>${book.read}</span></h4>
