@@ -22,3 +22,33 @@ function addBookToLibrary() {
 
 addBookToLibrary()
 console.log(myLibrary)
+
+const bookContainer = document.getElementById('book-container');
+
+// Fonction pour ajouter un livre dans le DOM
+function addBookToDOM(book) {
+    const bookDiv = document.createElement('div');
+    bookDiv.classList.add('corver-book');
+    
+    bookDiv.innerHTML = `
+        <div class='title'> 
+            <h1>${book.title}</h1>
+        </div>
+        <div class="container-h4">
+            <h4>Author: <span>${book.author}</span></h4>
+        </div>
+        <div class="container-h4">
+            <h4>Page: <span>${book.pages}</span></h4>
+        </div>
+        <div class="container-h4">
+            <h4>Read: <span>${book.read}</span></h4>
+        </div>
+        <div class="container-button">
+            <button onclick="removeBook(this)">Remove Book</button>
+            <button onclick="changeStatus(this)">Change Status Read</button>
+        </div>
+    `;
+    bookContainer.appendChild(bookDiv);
+}
+
+myLibrary.forEach(addBookToDOM);
