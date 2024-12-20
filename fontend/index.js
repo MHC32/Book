@@ -1,4 +1,4 @@
-let myLibrary = []; 
+let myLibrary = [];
 
 function Book(title, author, page, read) {
     this.title = title;
@@ -17,7 +17,7 @@ let bookpika = new Book('Bouzen is a life ', 'PikaHD', 100000000, 'yes')
 
 
 function addBookToLibrary() {
-    myLibrary.push(bookhantz,bookcarl,bookdaan, bookpika)
+    myLibrary.push(bookhantz, bookcarl, bookdaan, bookpika)
 }
 
 addBookToLibrary()
@@ -29,7 +29,7 @@ const bookContainer = document.getElementById('book-container');
 function addBookToDOM(book) {
     const bookDiv = document.createElement('div');
     bookDiv.classList.add('corver-book');
-    
+
     bookDiv.innerHTML = `
         <div class='title'> 
             <h1>${book.title}</h1>
